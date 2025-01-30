@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
-using UnityEngine.UIElements;
 
-public class tanks : MonoBehaviour
+public class FRUIT : MonoBehaviour
+
 {
     // Start is called before the first frame update
     void Start()
@@ -12,11 +13,11 @@ public class tanks : MonoBehaviour
     }
 
     // Update is called once per frame
+    
     void Update()
     {
-
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
 
             transform.position = mousePos;
@@ -24,8 +25,7 @@ public class tanks : MonoBehaviour
         else
         {
         }
-
-
-
     }
 }
+     
+
