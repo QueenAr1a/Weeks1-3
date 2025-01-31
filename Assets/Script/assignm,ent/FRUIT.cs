@@ -19,7 +19,7 @@ public class FRUIT : MonoBehaviour
     {
         // starting with setting up the mouse position, making it a vector 2 so it stays on screen and world point to keep it in the frame
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        // this just tells if the mouse is pressed
+        // this just tells if the mouse is pressed origianlly was get  mouse button down but that only activated on click and not when held
         if (Input.GetMouseButton(0))
         {
             //this moves the fruit to the mouse postion
