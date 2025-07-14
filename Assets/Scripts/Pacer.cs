@@ -5,7 +5,9 @@ using UnityEngine;
 public class Pacer : MonoBehaviour
 {
     public float speed;
-    public Camera gameCamera;
+    //public Camera gameCamera;
+    //can be used instead of main camera if multiple cameras but cant be used in a prefab
+    /// </summary>
 
     private int direction = 1;
 
@@ -20,7 +22,7 @@ public class Pacer : MonoBehaviour
     {
         transform.position += Vector3.right * speed * direction;
 
-        Vector3 pacerPositionInScreenSpace = gameCamera.WorldToScreenPoint(transform.position);
+        Vector3 pacerPositionInScreenSpace = Camera.main.WorldToScreenPoint(transform.position);
 
         if (pacerPositionInScreenSpace.x > Screen.width)
         {
