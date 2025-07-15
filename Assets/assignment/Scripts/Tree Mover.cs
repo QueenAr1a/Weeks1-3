@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TreeMover : MonoBehaviour
 {
+        
     public float speed;
    
     // Start is called before the first frame update
@@ -18,7 +19,13 @@ public class TreeMover : MonoBehaviour
         transform.position += Vector3.right * speed;
         Vector3 TreeposinScreen = Camera.main.WorldToScreenPoint(transform.position);
 
-        if (TreeposinScreen.x > 360)
+
+        if (TreeposinScreen.x > Screen.width/3)
+        {
+            speed = 0.003f;
+        }
+
+        if (TreeposinScreen.x > Screen.width/2)
         {
             speed = 0;
         }
