@@ -5,6 +5,7 @@ using UnityEngine;
 public class treespawner : MonoBehaviour
 {
     public GameObject prefabToSpawn;
+    // using this to actually get the trees to spawn
     // Start is called before the first frame update
     void Start()
     {
@@ -15,11 +16,13 @@ public class treespawner : MonoBehaviour
     void Update()
     {
         bool leftclick = Input.GetMouseButtonDown(0);
+        //this just tests if the left mouse button has been clicked so it knows to spawn a tree
         if (leftclick)
         {
-            GameObject spawnedcannonball = Instantiate(prefabToSpawn, transform.position, Quaternion.identity);
-            Destroy(spawnedcannonball, 10);
-           
+            GameObject spawnedtree = Instantiate(prefabToSpawn, transform.position, Quaternion.identity);
+            // this gets the tree and spawns it at teh position of the spawner 
+            Destroy(spawnedtree, 20);
+           //this destroys the tree after 20 seconds i know that seems long but i had it at 10 and on lower frame rates it would tend to not finish before disappearing
         }
     }
 }
