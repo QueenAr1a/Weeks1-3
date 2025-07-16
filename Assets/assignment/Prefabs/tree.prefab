@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d6daae2dd534ef249a1e0c64b23bcecb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -97,4 +97,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98eb2d2178523434581b2fd89a8cf697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wood: {fileID: 21300000, guid: 103c99d9e440bde45afb000984afd132, type: 3}
+  Tree: {fileID: 4179515166398015433}
   speed: 0.01
